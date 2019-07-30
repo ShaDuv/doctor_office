@@ -12,13 +12,19 @@
   <button type="submit">Post</button>
 </form>
 
-<!-- <form class="" action="/<%= @patient_name %>/add_patient" method="post">
+<form class="" action="/add_patient" method="post">
   <div class="form-group">
   <label for="">Patient Name (First Last)</label>
   <input type="text" name="patient_name" value="">
   <br>
   <label for="">Birthday</label>
   <input type="text" name="birthday" value="">
+  <label for="doctor">Select a Doctor</label>
+  <select name="doctor">
+  <%= @doctors.each do |doctor| %>
+    <option value=<%= id %> ><%= doctor %></option>
+    <% end %>
+</select>
   </div>
   <button type="submit">Post</button>
-</form> -->
+</form>

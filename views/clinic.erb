@@ -1,0 +1,18 @@
+<form class="" action="/<%= @board_name %>/post_message" method="post">
+  <label for="">Username</label>
+  <input type="text" name="user_name" value="">
+  <label for="">Topic</label>
+  <input type="text" name="topic" value="">
+  <label for="">Message</label>
+  <input type="text" name="content" value="">
+  <button type="submit">Post</button>
+</form>
+
+<% @posts.each do |post| %>
+    <div class="message">
+      <h3><%= post["user_name"] %></h3>
+      <p><%= post["time"] %></p>
+      <p><p><%= post["id"] %></p></p>
+      <p><%= post["content"] %></p>
+    </div>
+<% end %>
